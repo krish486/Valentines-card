@@ -2,6 +2,7 @@ import { Routes, Route, useLocation } from "react-router-dom"
 import Animation from "./components/Animation"
 import Home from "./pages/Home"
 import Page_loader from "./components/Page_loader";
+import Music from "./components/Music";
 
 const App = () => {
 
@@ -10,6 +11,7 @@ const App = () => {
 
   return (
     <Page_loader key={location.pathname}>
+      <Music />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/animation" element={<Animation />} />
