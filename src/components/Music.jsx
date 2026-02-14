@@ -1,4 +1,4 @@
-import Suzume from "../assets/Lover.mp3";
+import Suzume from "../assets/Lover.mp4";
 import { useEffect, useRef } from "react";
 
 const Music = () => {
