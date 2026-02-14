@@ -14,6 +14,7 @@ const App = () => {
       <Music />
       <Routes>
         <Route path="/" element={<Home />} />
+
         <Route path="/animation" element={<Animation />} />
       </Routes>
     </Page_loader>

@@ -246,21 +246,7 @@ button:hover {
     line-height: 1;
 }
 
-.first::after {
-    content: "";
-    position: absolute;
-    width: clamp(120px, 30vw, 300px);
-    height: clamp(120px, 30vw, 300px);
-    background: radial-gradient(circle, rgba(255, 0, 100, 0.4), transparent);
-    border-radius: 50%;
-    z-index: -1;
-    -webkit-animation: pulse 3s infinite;
-    animation: pulse 3s infinite;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
+
 
 @-webkit-keyframes loveGlow {
     0% {

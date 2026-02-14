@@ -1,25 +1,23 @@
-import Suzume from "../assets/Suzume.mp3"
+import Suzume from "../assets/Suzume.mp3";
 import { useEffect, useRef } from "react";
 
 const Music = () => {
-    const audioRef = useRef(null)
+    const audioRef = useRef(null);
+
     useEffect(() => {
-        const playMusic = () => {
-            if (audioRef.current) {
-                audioRef.current.play();
-            }
-            window.removeEventListener("click", playMusic);
-        };
-
-        window.addEventListener("click", playMusic);
-
-        return () => {
-            window.removeEventListener("click", playMusic);
-        };
+        audioRef.current.play().catch(() => {
+            console.log("Autoplay blocked by browser");
+        });
     }, []);
-    return (
-        <audio ref={audioRef} src={Suzume}></audio>
-    )
-}
 
-export default Music
+    return (
+        <audio
+            ref={audioRef}
+            src={Suzume}
+            loop
+            style={{ display: "none" }}
+        />
+    );
+};
+
+export default Music;
