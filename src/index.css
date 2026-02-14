@@ -420,6 +420,7 @@ button:hover {
 @media (min-width: 651px) and (max-width: 800px) {
     .card {
         height: clamp(420px, 45vw, 720px);
+        left: 10%;
     }
 
     .love h1 {
@@ -432,6 +433,17 @@ button:hover {
 }
 
 @media (min-width: 801px) and (max-width: 1080px) {
+    .inside{
+        justify-content: center;
+    }
+    .love h1 {
+        font-size: clamp(20px, 3vw, 32px);
+    }
+}
+@media (min-width: 1080px) {
+    .inside{
+        justify-content: center;
+    }
     .love h1 {
         font-size: clamp(20px, 3vw, 32px);
     }
